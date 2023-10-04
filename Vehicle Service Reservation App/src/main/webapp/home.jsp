@@ -14,7 +14,7 @@
 						    </div>
 						    <div class="text-end pt-1">
 						      <p class="text-sm mb-0 text-capitalize">USERNAME</p>
-						      <h4 class="mb-0">Gimhani</h4>
+						      <h4 class="mb-0">Gimhani Fernando</h4>
 						    </div>
 						</div>
 					</div>
