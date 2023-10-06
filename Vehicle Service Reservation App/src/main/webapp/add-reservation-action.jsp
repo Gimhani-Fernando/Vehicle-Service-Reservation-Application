@@ -50,11 +50,11 @@ try{
     if (rowsAffected > 0) {
         // Redirect to a success page or perform any other necessary action
         //response.sendRedirect("success.jsp");
-    	response.sendRedirect("home.jsp?msg=valid");
+    	response.sendRedirect("add-reservation.jsp?msg=valid");
     } else {
         // Redirect to an error page
         //response.sendRedirect("error.jsp");
-    	response.sendRedirect("home.jsp?msg=Invalid");
+    	response.sendRedirect("add-reservation.jsp?msg=Invalid");
 
     }
 
@@ -65,7 +65,7 @@ try{
     e.printStackTrace();
     // Redirect to an error page
     //response.sendRedirect("error.jsp");
-	response.sendRedirect("home.jsp?msg=exception");
+	response.sendRedirect("add-reservation.jsp?msg=exception");
 
 }
 	

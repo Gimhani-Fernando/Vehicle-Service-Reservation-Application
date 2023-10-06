@@ -3,7 +3,8 @@
 <div class="container">
 	<div class="row">
         <div class="col-md-12">
-        	<h2>PROFILE</h2>
+        	<h3>Profile</h3>
+        	<br>
         	<br>
         	<div class="row">
 		      	<div class="col-lg-10 col-sm-1">

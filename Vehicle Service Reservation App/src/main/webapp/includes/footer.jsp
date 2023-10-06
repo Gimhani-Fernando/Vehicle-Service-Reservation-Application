@@ -17,15 +17,20 @@
     </footer>
   </main>
   
-  </body>
 	  <script src="../assets/js/bootstrap.bundle.min"></script>
 	  <script src="../assets/js/perfect-scrollbar.min.js"></script>
   	  <script src="../assets/js/smooth-scrollbar.min.js"></script>
   
 	  <!-- Alertify JS -->
 	  <script src="//cdn.jsdelivr.net/npm/alertifyjs@1.13.1/build/alertify.min.js"></script>
+	  
 	  <script>
+	  <!--???????????????????if session is set only put this
+			  if(session.getAttribute(message)!=null){-->
 		  alertify.set('notifier','position', 'top-right');
-		  alertify.success('hELLO wORLD'));
+		  alertify.success('display session message');
+		  <!--unset(session(message))-->
 	  </script>
+	  
+	</body>
 </html>
