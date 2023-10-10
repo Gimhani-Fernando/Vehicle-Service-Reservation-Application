@@ -19,4 +19,12 @@
       </plugin>
     </plugins>
   </build>
+  <dependencies>
+        <!-- JSON library -->
+        <dependency>
+            <groupId>org.json</groupId>
+            <artifactId>json</artifactId>
+            <version>20230618</version> <!-- Use the version that matches your JAR file -->
+        </dependency>
+    </dependencies>
 </project>
