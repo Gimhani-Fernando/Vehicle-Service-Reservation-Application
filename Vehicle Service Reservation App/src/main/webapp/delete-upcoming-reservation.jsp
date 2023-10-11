@@ -1,6 +1,7 @@
 <%@page import="config.ConnectionProvider"%>
 <%@page import="java.sql.*"%>
 <%@include file="includes/header.jsp"%>
+<% String username =  (String)request.getSession().getAttribute("username"); %>
 
 <div class="container">
 	<div class="row">
@@ -13,7 +14,7 @@
         			<%
 						try {
 							Connection con = ConnectionProvider.getCon();
-							PreparedStatement ps = con.prepareStatement("select * from vehicle_service where username='Hotaru' and date >= ?");
+							PreparedStatement ps = con.prepareStatement("select * from vehicle_service where username='"+username+"' and date >= ?");
 							ps.setDate(1, java.sql.Date.valueOf(java.time.LocalDate.now()));
 							ResultSet rs = ps.executeQuery();
 

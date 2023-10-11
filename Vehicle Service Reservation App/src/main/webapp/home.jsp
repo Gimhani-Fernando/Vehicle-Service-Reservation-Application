@@ -43,10 +43,24 @@
 
                 // Extract user information
                 String username = userinfoJson.optString("username");
-                String name = userinfoJson.optString("given_name");
+                String firstName = userinfoJson.optString("given_name");
+                String lastName = userinfoJson.optString("family_name");
                 String email = userinfoJson.optString("email");
-                String contactNumber = userinfoJson.optString("phone");
-                String country = userinfoJson.optString("country");
+                String contactNumber = userinfoJson.optString("phone_number");
+             	// Extract the address object
+                JSONObject addressJson = userinfoJson.optJSONObject("address");
+
+                // Initialize country as an empty string (or any default value)
+                String country = "";
+
+                // Check if the address object is not null
+                if (addressJson != null) {
+                    // Retrieve the country from the address object
+                    country = addressJson.optString("country");
+                }
+
+             	// Set the username as a session attribute
+                request.getSession().setAttribute("username", username);
 
                 // Display user information
 %>
@@ -78,7 +92,7 @@
 					    	</div>
 							<div class="text-end pt-1">
 						      <p class="text-sm mb-0 text-capitalize">NAME</p>
-						      <h4 class="mb-0"><%= name %></h4>
+						      <h4 class="mb-0"><%= firstName +" "+lastName %></h4>
 						    </div>
 					  	</div>
 					</div>

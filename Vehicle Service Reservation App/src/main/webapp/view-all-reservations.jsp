@@ -2,6 +2,7 @@
 <%@page import="java.sql.*"%>
 <%@include file="includes/header.jsp"%>
 
+<% String username =  (String)request.getSession().getAttribute("username"); %>
 <div class="container">
 	<div class="row">
         <div class="col-md-12">
@@ -13,7 +14,7 @@
         			<%
 						try {
 							Connection con = ConnectionProvider.getCon();
-							PreparedStatement ps = con.prepareStatement("select * from vehicle_service where username='Hotaru'");
+							PreparedStatement ps = con.prepareStatement("select * from vehicle_service where username='"+username+"'");
 							ResultSet rs = ps.executeQuery();
 
 							if (rs.next()) {
