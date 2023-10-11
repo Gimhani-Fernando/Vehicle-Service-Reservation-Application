@@ -1,6 +1,7 @@
 <%@ page import="java.io.*, java.net.*, java.util.*" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@ page import="org.json.JSONObject" %>
+<%@ page import="config.Config" %>
 
 <%
     // Extract the authorization code from the request parameters
@@ -8,11 +9,12 @@
 
     // Check if the authorization code is not null or empty
     if (authorizationCode != null && !authorizationCode.isEmpty()) {
-        // Define token endpoint and client credentials
-        String tokenEndpoint = "https://api.asgardeo.io/t/kelaniya/oauth2/token";
-        String clientId = "dgCC0_KvNY9wiUklClVntC9_S4Ua";
-        String clientSecret = "QasP1y3P2DDreZCTXXUyNqmlNIU511HSx_OQxwbYrNEa";
-        String redirectUri = "http://localhost.com:8080/VehicleServiceReservationApp/oauth2client.jsp";
+    	// Use the configuration parameters from Config.java
+        String clientId = Config.getClientId();
+        String clientSecret = Config.getClientSecret();
+        String redirectUri = Config.getRedirectUri();
+        String tokenEndpoint = Config.getTokenEndpoint();
+
 
         try {
             // Construct the request data for token exchange

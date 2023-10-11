@@ -15,6 +15,7 @@ public class Config {
         }
     }
 
+    //Database configs
     public static String getDatabaseURL() {
         return properties.getProperty("db.url");
     }
@@ -25,5 +26,22 @@ public class Config {
 
     public static String getDatabasePassword() {
         return properties.getProperty("db.password");
+    }
+    
+    //Asgardeo configs
+    public static String getClientId() {
+        return properties.getProperty("client.id");
+    }
+
+    public static String getClientSecret() {
+        return properties.getProperty("client.secret");
+    }
+
+    public static String getRedirectUri() {
+        return properties.getProperty("redirect.uri");
+    }
+
+    public static String getTokenEndpoint() {
+        return properties.getProperty("token.endpoint");
     }
 }
